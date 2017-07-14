@@ -14,9 +14,11 @@ namespace Movie.Controllers
             return View();
         }
 
-        public string Welcome(string name, int id = 1)
+        public ViewResult Welcome(string name, int numTimes = 1)
         {
-            return HttpUtility.HtmlEncode("Hello, "+name+"! Your ID is "+id);
+            ViewBag.Message = "hello "+name;
+            ViewBag.NumTimes = numTimes;
+            return View();
         }
     }
 }
