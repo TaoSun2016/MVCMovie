@@ -27,11 +27,6 @@ namespace Movie.Controllers
             return View(moviees);
    
         }
-        [HttpPost]
-        public string Index(FormCollection  fc, string searchString)
-        {
-            return "<h3>Form[HttpPost]Index:" + searchString + "</h3>";
-        }
 
         // GET: Moviees/Details/5
         public ActionResult Details(int? id)

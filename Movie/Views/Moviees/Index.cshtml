@@ -9,10 +9,10 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@using (Html.BeginForm())
+@using (Html.BeginForm("Index","Moviees",FormMethod.Get))
 {
     <p>
-        Title:       @Html.TextBox("searchString")<br />
+        Title:@Html.TextBox("searchString")<br />
         <input type="submit" value="Filter" />
     </p>
 
