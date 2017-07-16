@@ -15,9 +15,17 @@ namespace Movie.Controllers
         private MovieDBContext db = new MovieDBContext();
 
         // GET: Moviees
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.Movies.ToList());
+            //return View(db.Movies.ToList());
+            var moviees = from m in db.Movies
+                          select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                moviees = moviees.Where(s=>s.Title.Contains(searchString));
+            }
+            return View(moviees);
+   
         }
 
         // GET: Moviees/Details/5
