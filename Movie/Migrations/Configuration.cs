@@ -34,25 +34,30 @@ namespace Movie.Migrations
                     Title = "When Harry Met Sally",
                     ReleaseDate = DateTime.Parse("1989-1-11"),
                     Genre = "Romantic Comedy",
-                    Price = 7.99m
+                    Price = 7.99m,
+                    Rating = "PG"
                 },
                 new Moviee
                 {
                     Title = "Ghostbusters ",
                     ReleaseDate = DateTime.Parse("1984-3-13"),
                     Genre = "Comedy",
-                    Price = 8.99M },
+                    Price = 8.99M,
+                    Rating = "PG"
+                },
                 new Moviee
                 {
                     Title = "Ghostbusters 2",
                     ReleaseDate = DateTime.Parse("1986-2-23"),
                     Genre = "Comedy",
+                    Rating = "PG",
                     Price = 9.99M },
                 new Moviee
                 {
                     Title = "Rio Bravo",
                     ReleaseDate = DateTime.Parse("1959-4-15"),
                     Genre = "Western",
+                    Rating = "PG",
                     Price = 3.99M
                 }
              );
